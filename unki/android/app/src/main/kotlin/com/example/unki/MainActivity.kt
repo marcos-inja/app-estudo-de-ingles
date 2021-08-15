@@ -1,4 +1,4 @@
-package com.example.app_estudo_de_ingles
+package com.example.unki
 
 import io.flutter.embedding.android.FlutterActivity
 

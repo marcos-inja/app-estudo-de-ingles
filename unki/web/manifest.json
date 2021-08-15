@@ -1,6 +1,6 @@
 {
-    "name": "app_estudo_de_ingles",
-    "short_name": "app_estudo_de_ingles",
+    "name": "unki",
+    "short_name": "unki",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
