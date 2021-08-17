@@ -13,7 +13,6 @@ class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
   final screens = [
     HomesPage(),
-    AddPage(),
     PersonPage(),
   ];
 
@@ -24,9 +23,8 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed, // padrão
         iconSize: 30,
-        // showSelectedLabels: false,
-        showUnselectedLabels: false,
-        backgroundColor: Colors.blue,
+
+        backgroundColor: Color(0xff54759E),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white60,
         currentIndex: currentIndex,
@@ -35,20 +33,27 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            // backgroundColor: Colors.blue,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add),
-            label: 'Add',
-            // backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Person',
-            // backgroundColor: Colors.blue,
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.add,
+          size: 30,
+        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
+        elevation: 0.1,
+        backgroundColor: Colors.blue.shade400,
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => AddPage()));
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
