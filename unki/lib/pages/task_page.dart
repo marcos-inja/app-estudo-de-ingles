@@ -199,8 +199,7 @@ class TaskPage extends StatelessWidget {
   }
 
   Container popup(context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+    //var height = MediaQuery.of(context).size.height;
     return Container(
       child: Column(
         children: [
@@ -225,13 +224,14 @@ class TaskPage extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          Text(
-            'Você acertou a resposta!',
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.white,
+           Text(
+              'Você acertou a resposta!',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+              ),
             ),
-          ),
           SizedBox(height: 25),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -254,8 +254,7 @@ class TaskPage extends StatelessWidget {
           ),
         ],
       ),
-      height: height - 375,
-      width: width - 1000,
+      height: 320,
     );
   }
 }
