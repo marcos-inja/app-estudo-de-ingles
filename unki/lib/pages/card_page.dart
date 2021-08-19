@@ -9,10 +9,12 @@ class CardPage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
+                
                 MaterialPageRoute(builder: (context) => TaskPage()),
               );
             },
           ),
         ),
       );
+
 }
