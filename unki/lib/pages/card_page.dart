@@ -14,12 +14,7 @@ class CardPage extends StatelessWidget {
 
 _body(context) {
   return ListView(
-    children: [
-      MyStatelessWidget(),
-      editar(context),
-      iniciar(context),
-      buildContainerCard()
-    ],
+    children: [MyStatelessWidget(), listBot(context), buildContainerCard()],
   );
 }
 
@@ -56,20 +51,28 @@ MyStatelessWidget() {
   );
 }
 
+Widget listBot(context) {
+  return Container(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [editar(context), iniciar(context)],
+    ),
+  );
+}
+
 Widget editar(context) {
   return TextButton(
     style: TextButton.styleFrom(
         backgroundColor: Color(0xff54759E),
         elevation: 15,
-        shadowColor: Colors.green),
+        shadowColor: Color(0xff5479ff)),
     child: Text(
-      'Edite',
+      'EDITAR',
       style: TextStyle(
           color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
     ),
     onPressed: () {
-      Navigator.push(context,
-          MaterialPageRoute(builder: (context) => MyStatelessWidget()));
+      // Irá redirecionar para a pagina de editar o card(não ta criada ainda).
     },
   );
 }
@@ -77,9 +80,10 @@ Widget editar(context) {
 Widget iniciar(context) {
   return TextButton(
     style: TextButton.styleFrom(
+        padding: EdgeInsets.all(10),
         backgroundColor: Color(0xff54759E),
         elevation: 15,
-        shadowColor: Colors.green),
+        shadowColor: Color(0xff5479ff)),
     child: Text(
       'INICIAR',
       style: TextStyle(
