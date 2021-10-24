@@ -1,0 +1,12 @@
+CREATE DATABASE unkidb;
+USE unkidb;
+
+CREATE TABLE Tarefas (
+  ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+  assunto VARCHAR(200),
+  tarefa VARCHAR(1000),
+  resposta VARCHAR(1000),
+  tempo VARCHAR(40)
+);
+
+INSERT INTO assuntos (assunto, tarefa, resposta, tempo) VALUES ('basic', 'What's you name?', 'Qual o seu nome?', '1d' ), ('basic', 'Mouse', 'Rato', '1d' );
