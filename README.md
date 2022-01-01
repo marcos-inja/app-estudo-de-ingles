@@ -1,5 +1,5 @@
 # APP - Estudo de inglês
-Aplicativo em desenvolvimento para a disciplina de programação mobile
+Aplicativo em desenvolvimento para a disciplina de programação movél 
 
 **Aluno:** José Martins <br>
 **Aluno:** Jonathan Candido <br>
