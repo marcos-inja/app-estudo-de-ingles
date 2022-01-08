@@ -2,32 +2,40 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TaskPage extends StatelessWidget {
-  Widget build(BuildContext context) => Scaffold(
+  Widget build(BuildContext context) => 
+  
+
+  Scaffold(
+    
         appBar: AppBar(
           title: Text('Tarefas'),
           backgroundColor: Color(0xff54759E),
         ),
+        resizeToAvoidBottomInset: false,
         body: buildBody(context),
         backgroundColor: Color(0xff202125),
       );
 
   buildBody(context) {
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          titulo(texto: "Escreva em português:"),
-          questao(palavra: "Blue"),
-          Align(
-            alignment: Alignment.center,
-            child: botaoverificar(context),
-          ),
-          SizedBox(height: 16),
-          Align(
-            alignment: Alignment.center,
-            child: botaopular(context),
-          ),
-        ],
+    
+    return SingleChildScrollView(
+      child: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            titulo(texto: "Escreva em português:"),
+            questao(palavra: "Blue"),
+            Align(
+              alignment: Alignment.center,
+              child: botaoverificar(context),
+            ),
+            SizedBox(height: 16),
+            Align(
+              alignment: Alignment.center,
+              child: botaopular(context),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -199,9 +207,13 @@ class TaskPage extends StatelessWidget {
   }
 
   Container popup(context) {
-    //var height = MediaQuery.of(context).size.height;
+    //var height = MediaQuery.of(context).size.height;´
+    
     return Container(
-      child: Column(
+    
+      child: 
+      SingleChildScrollView(
+        child: Column(
         children: [
           Align(
             alignment: Alignment.topRight,
@@ -233,9 +245,10 @@ class TaskPage extends StatelessWidget {
               ),
             ),
           SizedBox(height: 25),
-          ElevatedButton(
+          
+           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.all(18),
+              padding: EdgeInsets.all(10),
               primary: Color(0xff54759E),
             ),
             onPressed: () {
@@ -252,9 +265,11 @@ class TaskPage extends StatelessWidget {
               ),
             ),
           ),
+          
         ],
       ),
-      height: 320,
-    );
+
+    ),
+  );
   }
 }

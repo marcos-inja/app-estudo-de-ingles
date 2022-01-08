@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class AddPage extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
-        body: MyHomePage(title: "ADICIONAR NOVO POST")
+        body: MyHomePage(title: "ADICIONAR NOVO POST"), 
+        
       );
 }
 
@@ -49,13 +50,17 @@ class _MyHomePageState extends State<MyHomePage> {
   
   @override
   Widget build(BuildContext context) {
+
     
     return Scaffold(
+      
       backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: buildBody(),
+      body: buildBody(
+        
+      ),
       resizeToAvoidBottomInset: false,
       );
       
@@ -64,15 +69,26 @@ class _MyHomePageState extends State<MyHomePage> {
 
   
   buildBody(){
-    return Column(
-      children: [
-        buildContainerS(),
-        buildContainerP(),
-        buildContainerR(),
-        buildButtonSal(),
+   return SingleChildScrollView(
+        child: Column(
+          children: [
+          buildContainerS(),
+          buildContainerP(),
+          buildContainerR(),
+          buildButtonSal(),
+          ],
+        ),
+      );
+
+    //return Column(
+      //children: [
+        //buildContainerS(),
+       // buildContainerP(),
+        //buildContainerR(),
+        //buildButtonSal(),
         
-      ],
-    );
+      //],
+    //);
       
   }
   buildDropdownButton(){
@@ -210,8 +226,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   buildwidgetTextField(){
     return TextField(
+     
       decoration: 
-        
         InputDecoration(
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20),
         ), 
