@@ -1,4 +1,4 @@
-# APP - Estudo de inglês
+# Unki
 Aplicativo em desenvolvimento para a disciplina de programação movél.
 
 **Aluno:** José Martins <br>
